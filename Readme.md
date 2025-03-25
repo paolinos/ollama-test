@@ -46,7 +46,7 @@ deactivate
 
 
 ### Projects
-- [Spam Email Checker](./app/spam_checker.py)
+- [Spam Email Checker](./apps/spam_checker.py)
 ```mermaid
 stateDiagram
     direction LR
