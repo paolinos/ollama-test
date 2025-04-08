@@ -20,6 +20,10 @@ docker run -d -v $(pwd)/ollama_models:/root/.ollama -p 11434:11434 --name ollama
 docker exec -it ollama ollama run llama3.2:1b
 # Or Qwen Coder
 docker exec -it ollama ollama run qwen2.5-coder:1.5b
+# 
+docker exec -it ollama ollama run qwen2.5-coder:7b
+# Instruct
+docker exec -it ollama ollama run qwen2.5-coder:7b-instruct
 
 # if the container is not running you can start with
 docker container start ollama
@@ -47,6 +51,7 @@ deactivate
 
 ### Projects
 - [Spam Email Checker](./apps/spam_checker.py)
+Agent to check email and analyse for spams.
 ```mermaid
 stateDiagram
     direction LR
@@ -60,3 +65,6 @@ stateDiagram
 ```
 - [Create Chat app](./apps/create_chat.py)
 Run the model with a prompt to create a specific app
+
+- [RAG](./apps/rag/app.py)
+Following with Hugging Face course, here a RAG example for an agent with tools that can search on web, have information from db, wheather or Hugging face api to list models.
